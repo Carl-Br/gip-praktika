@@ -11,9 +11,9 @@ int main(){
     //wahl der umrechnung
     cout
     <<"\nIhre Auswahl der Umwandlung:\n"
-    <<"1 - Celsius in Fahrenheit\n"
-    <<"2 - Meter in Fuss\n"
-    <<"3 - Euro in US Dollar\n";
+    <<"1 - Celsius in Fahrenheit\n" //12.3  --> 54.14 
+    <<"2 - Meter in Fuss\n"         //23.4  --> 76.7707
+    <<"3 - Euro in US Dollar\n";    //34.5  --> 44.7017
 
     double auswahl;
     cin>>auswahl;
