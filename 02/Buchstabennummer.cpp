@@ -7,6 +7,6 @@ int main(){
     char eingabe;
     cin>>eingabe;
     int nummer = (int)eingabe;
-    cout<<"Der Buchstabe a hat die Position "<<nummer-96<<" im Alphabet."<<endl;
+    cout<<"Der Buchstabe "<<eingabe<<" hat die Position "<<nummer-96<<" im Alphabet."<<endl;
     return 0;
 }
