@@ -69,7 +69,7 @@ int main()
 
     // ab hier ist alles gleich
 
-    cout<<"Beide Datumsangaben sind gleich.";
+    cout<<"Beide Datumsangaben sind gleich."<<endl;
 
     return 0;
 }
