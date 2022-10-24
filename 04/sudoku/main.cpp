@@ -50,6 +50,8 @@ int main(){
         anzahl_Sortierter_Reihen++;
     }
 
+    //sudoku ausgabe
+    
     cout<<"\n\nDas Sudoku lautet:\n"<<endl;
 
     int sudokureihe = 0;
