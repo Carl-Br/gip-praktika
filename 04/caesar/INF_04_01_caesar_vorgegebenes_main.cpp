@@ -11,6 +11,8 @@ string caesar(string original_text, unsigned int v)
 
     int neuer_BuchstabeInt;
     string caesarText ="";
+
+    //gehe jeden char im Originaltext durch
     for(int i =0;i<original_text.length();i++)
     {
         char original_buchstabe = original_text.at(i);

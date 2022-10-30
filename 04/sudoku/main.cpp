@@ -24,6 +24,7 @@ int main(){
     int anzahl_Sortierter_Zahlen_Der_Reihe; //gibt an, wie viele Zahlen aus der ... Reihe bereits eingescannt wurden.
     int anzahl_Sortierter_Reihen = 0;
 
+    //geht jede Zeile des Sudokus durch (auch die, die nur aus Strichen besteht)
     for(int i = 0;i<11;i++){
 
         if(i==3 || i==7){
