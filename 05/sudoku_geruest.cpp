@@ -32,7 +32,7 @@ bool pruefe_zeilen(int sudoku[][sudoku_groesse])
             //immernoch für jede Zahl in der Reihe
 
             //wenn die Zahl i in der Sudoku Reihe ist.
-            zahlIstInReihe = 0;
+            zahlIstInReihe = false;
             for(int j = 0;j<sudoku_groesse;j++){
                 if(i+1==sudoku[k][j]){
                     // die Zahl i ist in der Reihe k
