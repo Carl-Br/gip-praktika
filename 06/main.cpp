@@ -9,6 +9,8 @@ using namespace std;
 int main(){
 
     string kurzeliste="",langeliste="";
+
+
     //lese datei
     string personString;
 
@@ -17,13 +19,13 @@ int main(){
 
         personString = "";
         getline(personendatenDatei,personString);
-        Person p = extrahiere_person(personString);
 
         //break wenn durchgelaufen
         if(bool(personendatenDatei.eof())){
             break;
         }
-        
+
+        Person p = extrahiere_person(personString);
         kurzeliste+=("<b>"+p.nachname+"</b>, "+p.vorname+"</br>");
         langeliste+=("<b>"+p.vorname+" "+p.nachname+"</b>, "+p.geburtsdatum+"</br>");
 
@@ -31,17 +33,18 @@ int main(){
     personendatenDatei.close();
 
     //lese html datei aus
-    string html ="";
+    string html ="";//hier kommt die webseite mit den Namen rein
     string htmlline;
     fstream webseitehtmltemp("webseitehtmltmpl.sec",ios::in);
     while(true){
 
         htmlline="";
         getline(webseitehtmltemp,htmlline);
-        html+=htmlline;
         if(bool(webseitehtmltemp.eof())){
             break;
         }
+
+        html+=htmlline;
     }
 
     webseitehtmltemp.close();
@@ -58,7 +61,7 @@ int main(){
             neuesHtml+=html.at(i);
         }
     }
-    cout<<neuesHtml<<endl;
+
     // in file schreiben
     fstream webseite("webseite.html",ios::out);
     webseite<<neuesHtml;
@@ -68,7 +71,7 @@ int main(){
 
 Person extrahiere_person(string eingabezeile){
     struct Person p = {"","",""};
-    int variable = 0; //0: Nachname, 1: Vorname, 2: geburtsdatum
+    int variable = 0; //0: Nachname, 1: Vorname, 2: Geburtsdatum
     for(int i = 0;i<eingabezeile.length();i++){
 
         if(eingabezeile.at(i)==','){
