@@ -76,9 +76,9 @@ void parse_gesamtausdruck(std::string &input, std::size_t &pos)
     std::cout << "Betrete parse_gesamtausdruck()" << std::endl;
     
     // ... (TODO)
-    while(pos<=input.length()-2){//-1 weil pos bei 0 anfängt und nochmal -1, um die letzte Stelle (die ein Punkt sein muss seperat zu überprüfen)
-        parse_ausdruck(input, pos);
-    }
+    
+    parse_ausdruck(input, pos);
+    
     match('.',input,pos);
     
     std::cout << "Verlasse parse_gesamtausdruck()" << std::endl;
@@ -220,7 +220,7 @@ void parse_number(std::string &input, std::size_t &pos)
     }else if(expect('9',input,pos)){
         match('9',input,pos);
     }else{
-        std::cout<<"Error ! number an position "<<pos<<" erwartet"<<std::endl;
+        std::cout<<"Error! number an position "<<pos<<" erwartet"<<std::endl;
     }
          
     std::cout << "Verlasse parse_number()" << std::endl;
@@ -239,7 +239,7 @@ int main()
     //std::string input = "(3U4U7)>(5U2)."; // syntaktisch korrekt
     //std::string input = "(4>3)U2<7."; // syntaktisch korrekt
     //std::string input = "(4>3)U2<7"; // syntaktisch inkorrekt: finaler Punkt fehlt
-    std::string input = "(9>)U2<"; // syntaktisch inkorrekt
+    std::string input = "(9>1)U2<"; // syntaktisch inkorrekt
     //std::string input; std::getline(std::cin, input);
 
     parse_gesamtausdruck(input, pos);
